@@ -9,6 +9,6 @@
 
 template "/tmp/first-book.conf" do
     source "first-book.conf.erb"
-    variables :display_msg => node[:display_msg]
+    variables :display_msg => "#{node[:test][:message]}"
 end
 
