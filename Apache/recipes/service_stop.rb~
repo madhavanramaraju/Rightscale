@@ -1,0 +1,13 @@
+#
+# Cookbook Name:: apache
+# Recipe:: service_stop
+#
+# Copyright 2012, YOUR_COMPANY_NAME
+#
+# All rights reserved - Do Not Redistribute
+#
+
+# Apache server stop
+service "#{node[:apache][:package]}" do
+    action :stop
+end
