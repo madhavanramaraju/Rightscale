@@ -61,11 +61,8 @@ MaxRequestsPerChild <%=node[:apache][:worker][:maxrequestsperchild]%>
 
 DocumentRoot <%=node[:apache][:doc_root_dir]%>
 
-#DefaultType text/plain
-
-#HostnameLookups Off
-
-#Include <%= node[:apache][:dir] %>/conf.d/
+#LoadModule default
+LoadModule dir_module modules/mod_dir.so
 
 # Set up application listeners
 Listen <%=node[:apache][:listen_ports]%>
